@@ -30,11 +30,9 @@
                     <option selected>正體中文 (zh_tw)</option>
                     <option>English (en)</option>
                 </select>
-                <span class="dot">・</span>
                 <span class="highlight modal-trigger">Cookie 使用資訊</span>
 
-
-            </div>
+        </div>
         </div>
     </div>
 </div>
@@ -46,57 +44,6 @@
         <span class="continue">Continue</span>
     </p>
 </footer>
-
-<!-- ✅ Cookie 彈窗 -->
-<div id="cookieModal" class="modal">
-    <div class="modal-content">
-        <span class="close" id="closeModal">&times;</span>
-        <h2>您的瀏覽器必須啟動 Cookies 功能</h2>
-        <p>
-            本站使用了兩個 cookie：必要的是連線 cookie，通常叫做 MoodleSession。
-            您必須啟動瀏覽器功能允許此 cookie，以便您能夠登入在頁與頁之間維持登入狀態。登出時，此 cookie 會被瀏覽器自動刪除。
-        </p>
-        <p>
-            另一個 cookie 純粹是為了方便，當選擇啟動「記住帳號」功能時，它會記錄您的帳號資訊以便下次使用。這並不會影響您於本網站的登入功能與安全性。
-        </p>
-        <p>
-            拒絕此 cookie 是安全的，只不過每次登入都要重新輸入帳號。
-        </p>
-        <button id="modalConfirm">好</button>
-    </div>
-</div>
-
-
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const modal = document.getElementById("cookieModal");
-        const closeBtn = document.getElementById("closeModal");
-        const confirmBtn = document.getElementById("modalConfirm");
-        const trigger = document.querySelector(".modal-trigger");
-
-        if (trigger) {
-            trigger.addEventListener("click", () => {
-                modal.style.display = "block";
-            });
-        }
-
-        closeBtn.addEventListener("click", () => {
-            modal.style.display = "none";
-        });
-
-        confirmBtn.addEventListener("click", () => {
-            modal.style.display = "none";
-        });
-
-        window.addEventListener("click", (e) => {
-            if (e.target === modal) {
-                modal.style.display = "none";
-            }
-        });
-    });
-</script>
-
 
 </body>
 </html>
